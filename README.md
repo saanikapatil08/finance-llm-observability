@@ -60,17 +60,25 @@ The system allows users to upload financial documents and ask natural language q
 
 ---
 
-
-```md
 ## Architecture
 
-1. User submits a financial query  
-2. Retriever fetches relevant document chunks  
-3. Vector database performs semantic search  
-4. RAG pipeline constructs contextual prompts  
-5. LLM generates grounded financial responses  
-6. Evaluation layer measures hallucination, latency, and quality  
-7. Monitoring dashboard tracks system performance and analytics
+```text
+User Query
+    ↓
+Retriever
+    ↓
+Vector Database
+    ↓
+RAG Pipeline
+    ↓
+LLM Response Generation
+    ↓
+Evaluation + Monitoring Layer
+    ↓
+Dashboard + Analytics
+```
+
+---
 
 ## Dataset Sources
 
@@ -101,3 +109,43 @@ git clone https://github.com/yourusername/finance-llm-observability.git
 cd finance-llm-observability
 
 pip install -r requirements.txt
+```
+
+---
+
+## Run Locally
+
+```bash
+uvicorn app.main:app --reload
+```
+
+---
+
+## Example Queries
+
+- Summarize NVIDIA’s Q4 earnings report
+- What are the major risks mentioned in Tesla’s 10-K filing?
+- Compare Amazon and Microsoft cloud revenue growth
+- What was the YoY revenue change for Apple?
+
+---
+
+## Future Improvements
+
+- Multi-agent financial reasoning
+- Real-time market integration
+- Voice-enabled financial assistant
+- Advanced portfolio analytics
+- Multi-modal financial document understanding
+
+---
+
+## Resume Impact
+
+Built a production-grade financial document intelligence platform using RAG pipelines, vector databases, and LLM observability systems with latency tracking, hallucination detection, and evaluation monitoring for enterprise-scale AI applications.
+
+---
+
+## License
+
+MIT License
