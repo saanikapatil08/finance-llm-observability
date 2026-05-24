@@ -60,23 +60,17 @@ The system allows users to upload financial documents and ask natural language q
 
 ---
 
+
+```md
 ## Architecture
 
-User Query
-↓
-Retriever
-↓
-Vector Database
-↓
-RAG Pipeline
-↓
-LLM Response Generation
-↓
-Evaluation + Monitoring Layer
-↓
-Dashboard + Analytics
-
----
+1. User submits a financial query  
+2. Retriever fetches relevant document chunks  
+3. Vector database performs semantic search  
+4. RAG pipeline constructs contextual prompts  
+5. LLM generates grounded financial responses  
+6. Evaluation layer measures hallucination, latency, and quality  
+7. Monitoring dashboard tracks system performance and analytics
 
 ## Dataset Sources
 
